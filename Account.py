@@ -28,6 +28,29 @@ class Movie(persistent.Persistent):
     
     def printDetails(self):
         print(self.__str__())
+        
+    def getMovieDetailsFromTitle(self):
+        # search for movie by title using OMDB API
+        api_key = "f5c548f1"
+        url = f"http://www.omdbapi.com/?apikey={api_key}&t={self.title}"
+        response = requests.get(url)
+        movie_data = response.json()
+
+        # create Movie object with fetched data
+        self.release_year = movie_data.get("Year")
+        self.genre = movie_data.get("Genre")
+        self.poster_link = movie_data.get("Poster")
+
+    @staticmethod
+    def getSuggestionFromTitle(title):
+        # search for movie titles and show suggestions by keyword using OMDB API
+        api_key = "f5c548f1"
+        url = f"http://www.omdbapi.com/?apikey={api_key}&s={title}"
+        response = requests.get(url)
+        results = response.json().get('Search', [])
+        # extract the titles from the search results
+        titles = [r.get('Title') for r in results]
+        return titles
     
     
 class ReviewMovie(persistent.Persistent):
@@ -54,5 +77,7 @@ class MovieList(persistent.Persistent):
     def printDetails(self):
         for m in self.movielist:
             m.printDetails()
+            
+    
     
 
