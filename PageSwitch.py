@@ -53,6 +53,7 @@ class PageSwitch(QMainWindow):
             self.stackp.load(self.user)
     
     def CloseChange(self):
+        self.stackp.w.clear()
         Main.closeConnection()
         self.stack.setCurrentWidget(self.login)
 
@@ -71,6 +72,8 @@ if __name__ == '__main__':
     w = PageSwitch()
     w.show()
     sys.exit(app.exec_())
+
+    
     
     
 

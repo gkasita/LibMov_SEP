@@ -71,8 +71,6 @@ class MovieList(persistent.Persistent):
         for m in self.movielist:
             if m.title == movie.title:
                 del self.movielist[i]
-
-
     
     def printDetails(self):
         for m in self.movielist:

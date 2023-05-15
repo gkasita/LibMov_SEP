@@ -72,6 +72,7 @@ class StackP(QMainWindow):
         self.pf.user = user
         
         self.pf.load()
+        self.w.load()
 
 
     
