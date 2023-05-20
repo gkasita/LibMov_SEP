@@ -174,6 +174,8 @@ class WatchC(QMainWindow):
                 if isinstance(widget, QPushButton):
                     self.ui.horizontalLayout_3.removeWidget(widget)
                     widget.deleteLater()
+                    
+        Connection.Connection.saveData()
 
 
     def clear(self):
