@@ -30,10 +30,11 @@ class MainStack(QMainWindow):
 
         self.login.ui.loginButton.clicked.connect(self.changeToProgram)
 
-        self.stackp.hp.ui.logoutBT.clicked.connect(self.changeToLogin)
-        self.stackp.rv.ui.logoutBT.clicked.connect(self.changeToLogin)
-        self.stackp.w.ui.logoutBT.clicked.connect(self.changeToLogin)
-        self.stackp.pf.ui.logoutBT.clicked.connect(self.changeToLogin)
+        self.stackp.hp.ui.logoutBT.clicked.connect(self.changeToLogin_Logout)
+        self.stackp.rv.ui.logoutBT.clicked.connect(self.changeToLogin_Logout)
+        self.stackp.w.ui.logoutBT.clicked.connect(self.changeToLogin_Logout)
+        self.stackp.pf.ui.logoutBT.clicked.connect(self.changeToLogin_Logout)
+    
     
     def changeToProgram(self):
         username = self.login.ui.usernameLED.text()
@@ -49,6 +50,10 @@ class MainStack(QMainWindow):
         self.stack.setCurrentWidget(self.signup)
     
     def changeToLogin(self):
+        self.stack.setCurrentWidget(self.login)
+    
+    def changeToLogin_Logout(self):
+        self.stackp.w.clear()
         self.stack.setCurrentWidget(self.login)
     
     
