@@ -15,8 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QPushButton,
-    QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QLineEdit, QPlainTextEdit, QPushButton, QScrollArea,
+    QSizePolicy, QSpinBox, QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -77,9 +78,165 @@ class Ui_Form(object):
         self.profileBT.setMaximumSize(QSize(100, 50))
         self.profileBT.setFont(font1)
         self.profileBT.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label = QLabel(Form)
+        self.scrollArea = QScrollArea(Form)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setGeometry(QRect(100, 0, 850, 650))
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.scrollArea.sizePolicy().hasHeightForWidth())
+        self.scrollArea.setSizePolicy(sizePolicy)
+        self.scrollArea.setMinimumSize(QSize(850, 650))
+        self.scrollArea.setMaximumSize(QSize(850, 650))
+        self.scrollArea.setStyleSheet(u"background-color: rgb(86, 77, 77);")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 862, 648))
+        self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
+#ifndef Q_OS_MAC
+        self.verticalLayout.setSpacing(-1)
+#endif
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(20, 10, 20, -1)
+        self.scrollArea_7 = QScrollArea(self.scrollAreaWidgetContents)
+        self.scrollArea_7.setObjectName(u"scrollArea_7")
+        self.scrollArea_7.setMinimumSize(QSize(822, 140))
+        self.scrollArea_7.setMaximumSize(QSize(822, 140))
+        self.scrollArea_7.setWidgetResizable(True)
+        self.scrollAreaWidgetContents_7 = QWidget()
+        self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 820, 140))
+        self.horizontalLayout_2 = QHBoxLayout(self.scrollAreaWidgetContents_7)
+        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.frame_2 = QFrame(self.scrollAreaWidgetContents_7)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setMinimumSize(QSize(300, 140))
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.frame_2)
+#ifndef Q_OS_MAC
+        self.verticalLayout_2.setSpacing(-1)
+#endif
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(10, 10, 0, 0)
+        self.searchLED = QLineEdit(self.frame_2)
+        self.searchLED.setObjectName(u"searchLED")
+        self.searchLED.setMinimumSize(QSize(0, 30))
+        self.searchLED.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+
+        self.verticalLayout_2.addWidget(self.searchLED)
+
+        self.widget = QWidget(self.frame_2)
+        self.widget.setObjectName(u"widget")
+        self.widget.setMinimumSize(QSize(350, 30))
+        self.widget.setMaximumSize(QSize(350, 25))
+        self.horizontalLayout_3 = QHBoxLayout(self.widget)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.addButton = QPushButton(self.widget)
+        self.addButton.setObjectName(u"addButton")
+        self.addButton.setMinimumSize(QSize(170, 25))
+        self.addButton.setMaximumSize(QSize(150, 25))
+        self.addButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
+
+        self.horizontalLayout_3.addWidget(self.addButton)
+
+        self.editButton = QPushButton(self.widget)
+        self.editButton.setObjectName(u"editButton")
+        self.editButton.setMinimumSize(QSize(170, 25))
+        self.editButton.setMaximumSize(QSize(150, 25))
+        self.editButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
+
+        self.horizontalLayout_3.addWidget(self.editButton)
+
+
+        self.verticalLayout_2.addWidget(self.widget)
+
+        self.deleteButton = QPushButton(self.frame_2)
+        self.deleteButton.setObjectName(u"deleteButton")
+        self.deleteButton.setMinimumSize(QSize(0, 25))
+        self.deleteButton.setMaximumSize(QSize(16777215, 25))
+        self.deleteButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
+
+        self.verticalLayout_2.addWidget(self.deleteButton)
+
+        self.label_2 = QLabel(self.frame_2)
+        self.label_2.setObjectName(u"label_2")
+
+        self.verticalLayout_2.addWidget(self.label_2)
+
+
+        self.horizontalLayout_2.addWidget(self.frame_2)
+
+        self.frame_3 = QFrame(self.scrollAreaWidgetContents_7)
+        self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setMinimumSize(QSize(100, 140))
+        self.frame_3.setMaximumSize(QSize(16777215, 140))
+        self.frame_3.setSizeIncrement(QSize(100, 0))
+        self.frame_3.setFrameShape(QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_3 = QVBoxLayout(self.frame_3)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.label = QLabel(self.frame_3)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(380, 130, 58, 16))
+
+        self.verticalLayout_3.addWidget(self.label)
+
+        self.ratingSPB = QSpinBox(self.frame_3)
+        self.ratingSPB.setObjectName(u"ratingSPB")
+        self.ratingSPB.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+
+        self.verticalLayout_3.addWidget(self.ratingSPB)
+
+
+        self.horizontalLayout_2.addWidget(self.frame_3)
+
+        self.textArea = QPlainTextEdit(self.scrollAreaWidgetContents_7)
+        self.textArea.setObjectName(u"textArea")
+        self.textArea.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+
+        self.horizontalLayout_2.addWidget(self.textArea)
+
+        self.scrollArea_7.setWidget(self.scrollAreaWidgetContents_7)
+
+        self.verticalLayout.addWidget(self.scrollArea_7)
+
+        self.widget_2 = QWidget(self.scrollAreaWidgetContents)
+        self.widget_2.setObjectName(u"widget_2")
+        self.widget_2.setMinimumSize(QSize(800, 220))
+        self.widget_2.setMaximumSize(QSize(800, 220))
+        self.widget_2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"border-radius: 20px")
+        self.pushButton_3 = QPushButton(self.widget_2)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+        self.pushButton_3.setGeometry(QRect(30, 40, 115, 170))
+        self.pushButton_3.setMinimumSize(QSize(115, 170))
+        self.pushButton_3.setMaximumSize(QSize(115, 170))
+        self.pushButton_3.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
+"color: rgb(255, 255, 255);")
+        self.TitleLB = QLabel(self.widget_2)
+        self.TitleLB.setObjectName(u"TitleLB")
+        self.TitleLB.setGeometry(QRect(40, 20, 241, 16))
+        self.reviewArea = QPlainTextEdit(self.widget_2)
+        self.reviewArea.setObjectName(u"reviewArea")
+        self.reviewArea.setGeometry(QRect(360, 40, 421, 161))
+        self.reviewArea.setStyleSheet(u"background-color: rgb(232, 232, 232);")
+        self.movieLB = QLabel(self.widget_2)
+        self.movieLB.setObjectName(u"movieLB")
+        self.movieLB.setGeometry(QRect(160, 50, 181, 111))
+        self.starratingLED = QLineEdit(self.widget_2)
+        self.starratingLED.setObjectName(u"starratingLED")
+        self.starratingLED.setGeometry(QRect(240, 170, 113, 21))
+        self.starratingLED.setStyleSheet(u"background-color: rgb(232, 232, 232);")
+        self.label_3 = QLabel(self.widget_2)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(160, 170, 71, 16))
+
+        self.verticalLayout.addWidget(self.widget_2)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
 
         self.retranslateUi(Form)
 
@@ -93,6 +250,14 @@ class Ui_Form(object):
         self.watchBT.setText(QCoreApplication.translate("Form", u"Watched", None))
         self.libmovBT.setText(QCoreApplication.translate("Form", u"LibMov", None))
         self.profileBT.setText(QCoreApplication.translate("Form", u"Profile", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Review", None))
+        self.addButton.setText(QCoreApplication.translate("Form", u"Add", None))
+        self.editButton.setText(QCoreApplication.translate("Form", u"Edit", None))
+        self.deleteButton.setText(QCoreApplication.translate("Form", u"Delete", None))
+        self.label_2.setText("")
+        self.label.setText(QCoreApplication.translate("Form", u"Star Rating", None))
+        self.pushButton_3.setText(QCoreApplication.translate("Form", u"LibMov", None))
+        self.TitleLB.setText(QCoreApplication.translate("Form", u"Title", None))
+        self.movieLB.setText(QCoreApplication.translate("Form", u"Movie Details", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"Star Rating:", None))
     # retranslateUi
 

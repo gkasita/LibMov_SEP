@@ -77,6 +77,9 @@ class Movie(persistent.Persistent):
     def getPosterLink(self):
         return self._poster_link
     
+    def getMovieId(self):
+        return self._movie_id
+    
     def getMovieDetailsFromTitle(self):
         # search for movie by title using OMDB API
         api_key = "f5c548f1"
