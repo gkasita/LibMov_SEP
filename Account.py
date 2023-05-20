@@ -4,6 +4,8 @@ from abc import ABC, abstractmethod
 import ZODB, ZODB.FileStorage
 import datetime
 
+import Image
+
 class User(persistent.Persistent):
     def __init__(self, username, password):
         self._username = username
