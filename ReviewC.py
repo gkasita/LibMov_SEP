@@ -23,8 +23,8 @@ class ReviewC(QMainWindow):
     def load(self, user):
         self.user = user
 
-        for m in self.user.getReviewList().getList():
-            self.addReview(m.getTitle(), m.getStarRating(), m.getReview())
+        for r in self.user.getReviewList().getList():
+            self.addReview(r.getMovie().getTitle(), r.getStarRating(), r.getReviewText(), "notui")
     
     def isMovieExist(self, title):
         m1 = Account.Movie(title)
@@ -58,22 +58,24 @@ class ReviewC(QMainWindow):
         rating = self.ui.ratingSPB.value()
         review = self.ui.textArea.toPlainText()
 
-        self.addReview(title, rating, review)
+        self.addReview(title, rating, review, "ui")
 
-    def addReview(self, t, rt, rv):
+    def addReview(self, t, rt, rv, type):
         title = t
         rating = rt
         review = rv
+        type = type
 
         if(self.isMovieExist(title)== False):
             self.ui.label_2.setText("movie does not exist")
             return
         
         m1 = Account.Movie(title)
-        r1 = Account.ReviewMovie(m1, review, rating)
+        if(type=="ui"):
+            r1 = Account.ReviewMovie(m1, review, rating)
 
-        self.user.getReviewList().addMovie(r1)
-        Connection.Connection.saveData()
+            self.user.getReviewList().addMovie(r1)
+            Connection.Connection.saveData()
 
         image = m1.getImagePath()
 
