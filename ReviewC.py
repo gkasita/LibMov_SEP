@@ -6,6 +6,7 @@ from PySide6.QtGui import QPixmap, QIcon
 from ReviewPageUi import Ui_Form
 
 import Account
+import Connection
 
 #searchLED, addButton, editButton, deleteButton, ratingSPB, textArea
 class ReviewC(QMainWindow):
@@ -16,10 +17,14 @@ class ReviewC(QMainWindow):
 
         self.user = user
 
-        self.ui.addButton.clicked.connect(self.addReview)
+        self.ui.addButton.clicked.connect(self.addReviewUi)
+        self.ui.deleteButton.clicked.connect(self.clear)
     
     def load(self, user):
         self.user = user
+
+        for m in self.user.getReviewList().getList():
+            self.addReview(m.getTitle(), m.getStarRating(), m.getReview())
     
     def isMovieExist(self, title):
         m1 = Account.Movie(title)
@@ -37,18 +42,39 @@ class ReviewC(QMainWindow):
         pass
 
     def clear(self):
-        pass
+        self.ui.searchLED.clear()
+        self.ui.textArea.clear()
 
-    def addReview(self):
+        while self.ui.verticalLayout.count()-2:
+            item = self.ui.verticalLayout.takeAt(2)
+            if item is not None:
+                widget = item.widget()
+                if widget is not None:
+                    self.ui.verticalLayout.removeWidget(widget)
+                    widget.deleteLater()
+    
+    def addReviewUi(self):
         title = self.ui.searchLED.text()
         rating = self.ui.ratingSPB.value()
         review = self.ui.textArea.toPlainText()
+
+        self.addReview(title, rating, review)
+
+    def addReview(self, t, rt, rv):
+        title = t
+        rating = rt
+        review = rv
 
         if(self.isMovieExist(title)== False):
             self.ui.label_2.setText("movie does not exist")
             return
         
         m1 = Account.Movie(title)
+        r1 = Account.ReviewMovie(m1, review, rating)
+
+        self.user.getReviewList().addMovie(r1)
+        Connection.Connection.saveData()
+
         image = m1.getImagePath()
 
         widget = QWidget(self.ui.scrollAreaWidgetContents)

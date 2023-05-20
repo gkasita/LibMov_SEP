@@ -222,14 +222,16 @@ class Ui_Form(object):
         self.reviewArea = QPlainTextEdit(self.widget_2)
         self.reviewArea.setObjectName(u"reviewArea")
         self.reviewArea.setGeometry(QRect(360, 40, 421, 161))
-        self.reviewArea.setStyleSheet(u"background-color: rgb(232, 232, 232);")
+        self.reviewArea.setStyleSheet(u"background-color: rgb(232, 232, 232);\n"
+"padding: 8px;")
         self.movieLB = QLabel(self.widget_2)
         self.movieLB.setObjectName(u"movieLB")
         self.movieLB.setGeometry(QRect(160, 50, 181, 111))
         self.starratingLED = QLineEdit(self.widget_2)
         self.starratingLED.setObjectName(u"starratingLED")
         self.starratingLED.setGeometry(QRect(240, 170, 113, 21))
-        self.starratingLED.setStyleSheet(u"background-color: rgb(232, 232, 232);")
+        self.starratingLED.setStyleSheet(u"background-color: rgb(232, 232, 232);\n"
+"padding: 8px;")
         self.label_3 = QLabel(self.widget_2)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(160, 170, 71, 16))
