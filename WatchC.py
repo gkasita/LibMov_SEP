@@ -138,7 +138,8 @@ class WatchC(QMainWindow):
             else:
                 return False
       
-    def removeMovie(self, title):
+    def removeMovie(self):
+        title = self.ui.searchLED.text()
 
         type = self.whichType()
 
@@ -148,52 +149,59 @@ class WatchC(QMainWindow):
         elif type == "watched":
             print("watched")
             i = self.user.getWatchedList().deleteMovie(title)
+            print(i)
             item = self.ui.horizontalLayout_5.takeAt(i)
             if item is not None:
                 widget = item.widget()
-                if widget is not None:
+                if isinstance(widget, QPushButton):
                     self.ui.horizontalLayout_3.removeWidget(widget)
                     widget.deleteLater()
         elif type == "watching":
             i = self.user.getWatchingList().deleteMovie(title)
+            print(i)
             item = self.ui.horizontalLayout_3.takeAt(i)
             if item is not None:
                 widget = item.widget()
-                if widget is not None:
+                if isinstance(widget, QPushButton):
                     self.ui.horizontalLayout_3.removeWidget(widget)
                     widget.deleteLater()
         elif type == "will watch":
             i = self.user.getWillWatchList().deleteMovie(title)
+            print(i)
             item = self.ui.horizontalLayout_4.takeAt(i)
             if item is not None:
                 widget = item.widget()
-                if widget is not None:
+                if isinstance(widget, QPushButton):
                     self.ui.horizontalLayout_3.removeWidget(widget)
                     widget.deleteLater()
-    
-    def remove(self, title):
-        pass
+
 
     def clear(self):
-        
-        while self.ui.horizontalLayout_3.count():
-            item = self.ui.horizontalLayout_3.takeAt(0)
+        self.ui.searchLED.clear()
+        self.ui.textArea.clear()
+        self.ui.watchedCB.setChecked(False)
+        self.ui.watchingCB.setChecked(False)
+        self.ui.willwatchCB.setChecked(False)
+
+
+        while self.ui.horizontalLayout_3.count()-1:
+            item = self.ui.horizontalLayout_3.takeAt(1)
             if item is not None:
                 widget = item.widget()
                 if widget is not None:
                     self.ui.horizontalLayout_3.removeWidget(widget)
                     widget.deleteLater()
         
-        while self.ui.horizontalLayout_4.count():
-            item = self.ui.horizontalLayout_4.takeAt(0)
+        while self.ui.horizontalLayout_4.count()-1:
+            item = self.ui.horizontalLayout_4.takeAt(1)
             if item is not None:
                 widget = item.widget()
                 if widget is not None:
                     self.ui.horizontalLayout_4.removeWidget(widget)
                     widget.deleteLater()
         
-        while self.ui.horizontalLayout_5.count():
-            item = self.ui.horizontalLayout_5.takeAt(0)
+        while self.ui.horizontalLayout_5.count()-1:
+            item = self.ui.horizontalLayout_5.takeAt(1)
             if item is not None:
                 widget = item.widget()
                 if widget is not None:

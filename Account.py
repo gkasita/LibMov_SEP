@@ -155,15 +155,18 @@ class MovieList(List, persistent.Persistent):
         self._list.append(movie)
         self._total_movie += 1
     
-    def deleteMovie(self, movie):
+    def deleteMovie(self, title):
         i = 0
         for m in self._list:
-            if m.getTitle() == movie.getTitle():
+            if m.getTitle() == title:
                 del self._list[i]
                 self._total_movie -= 1
-                return
+                print("i:" + str(i))
+                i=i+1
+                return i
+            i = i+1
         
-        return -1
+        return None
     
     def printDetails(self):
         for l in self._list:
