@@ -5,7 +5,7 @@ import ZODB, ZODB.FileStorage
 import datetime
 
 class User(persistent.Persistent):
-    def __init__(self, name, username, password):
+    def __init__(self, username, password):
         self._username = username
         self._password = password
 
@@ -53,8 +53,15 @@ class Movie(persistent.Persistent):
         self._released_year = None
         self._genre = None
         self._poster_link = None
+        self._image_path = None
+        self._movie_id = None
 
         self.getMovieDetailsFromTitle()
+        self._image_path = "./poster/movie" + str(self._movie_id) + ".png"
+        Image.save_image_from_url(self.getPosterLink(), self._image_path)
+       
+    def getImagePath(self):
+        return self._image_path
     
     def getTitle(self):
         return self._title
@@ -79,6 +86,7 @@ class Movie(persistent.Persistent):
         self._release_year = movie_data.get("Year")
         self._genre = movie_data.get("Genre")
         self._poster_link = movie_data.get("Poster")
+        self._movie_id = movie_data.get("imdbID")
 
     @staticmethod
     def getSuggestionFromTitle(title):
@@ -134,6 +142,9 @@ class MovieList(List, persistent.Persistent):
     def __init__(self):
         self._list = persistent.list.PersistentList()
         self._total_movie = 0
+        
+    def getList(self):
+        return self._list
     
     def getTotalMovie(self):
         return self._total_movie
@@ -161,6 +172,9 @@ class ReviewList(List, persistent.Persistent):
         self._list = persistent.list.PersistentList()
         self._average_rating = 0
         self._total_movie = 0
+        
+    def getList(self):
+        return self._list
     
     def getAverageRating(self):
         return self._average_rating
