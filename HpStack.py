@@ -31,6 +31,8 @@ class HpStack(QMainWindow):
         self.stack.addWidget(self.w)
         self.stack.addWidget(self.pf)
 
+        self.stack.setCurrentWidget(self.pf)
+
         self.hp.ui.libmovBT.clicked.connect(self.changeToHp)
         self.hp.ui.reviewBT.clicked.connect(self.changeToRv)
         self.hp.ui.watchBT.clicked.connect(self.changeToW)
