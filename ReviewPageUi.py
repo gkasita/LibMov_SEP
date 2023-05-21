@@ -223,36 +223,13 @@ class Ui_Form(object):
 
         self.widget_2 = QWidget(self.scrollAreaWidgetContents)
         self.widget_2.setObjectName(u"widget_2")
-        self.widget_2.setMinimumSize(QSize(800, 220))
-        self.widget_2.setMaximumSize(QSize(800, 220))
+        self.widget_2.setMinimumSize(QSize(800, 100))
+        self.widget_2.setMaximumSize(QSize(800, 100))
         self.widget_2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border-radius: 20px")
-        self.pushButton_3 = QPushButton(self.widget_2)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setGeometry(QRect(30, 40, 115, 170))
-        self.pushButton_3.setMinimumSize(QSize(115, 170))
-        self.pushButton_3.setMaximumSize(QSize(115, 170))
-        self.pushButton_3.setStyleSheet(u"background-color: rgb(0, 0, 0);\n"
-"color: rgb(255, 255, 255);")
-        self.TitleLB = QLabel(self.widget_2)
-        self.TitleLB.setObjectName(u"TitleLB")
-        self.TitleLB.setGeometry(QRect(40, 20, 241, 16))
-        self.reviewArea = QPlainTextEdit(self.widget_2)
-        self.reviewArea.setObjectName(u"reviewArea")
-        self.reviewArea.setGeometry(QRect(360, 40, 421, 161))
-        self.reviewArea.setStyleSheet(u"background-color: rgb(232, 232, 232);\n"
-"padding: 8px;")
-        self.movieLB = QLabel(self.widget_2)
-        self.movieLB.setObjectName(u"movieLB")
-        self.movieLB.setGeometry(QRect(160, 50, 181, 111))
-        self.starratingLED = QLineEdit(self.widget_2)
-        self.starratingLED.setObjectName(u"starratingLED")
-        self.starratingLED.setGeometry(QRect(240, 170, 113, 21))
-        self.starratingLED.setStyleSheet(u"background-color: rgb(232, 232, 232);\n"
-"padding: 8px;")
         self.label_3 = QLabel(self.widget_2)
         self.label_3.setObjectName(u"label_3")
-        self.label_3.setGeometry(QRect(160, 170, 71, 16))
+        self.label_3.setGeometry(QRect(370, 40, 58, 16))
 
         self.verticalLayout.addWidget(self.widget_2)
 
@@ -276,9 +253,6 @@ class Ui_Form(object):
         self.saveButton.setText(QCoreApplication.translate("Form", u"Save", None))
         self.label_2.setText("")
         self.label.setText(QCoreApplication.translate("Form", u"Star Rating", None))
-        self.pushButton_3.setText(QCoreApplication.translate("Form", u"LibMov", None))
-        self.TitleLB.setText(QCoreApplication.translate("Form", u"Title", None))
-        self.movieLB.setText(QCoreApplication.translate("Form", u"Movie Details", None))
-        self.label_3.setText(QCoreApplication.translate("Form", u"Star Rating:", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"LibMov", None))
     # retranslateUi
 
