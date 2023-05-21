@@ -44,7 +44,7 @@ class MainStack(QMainWindow):
             self.stack.setCurrentWidget(self.stackp)
             self.stackp.load(username)
         else:
-            self.ui.errorLabel.setText('invalid username or password')
+            self.login.ui.errorLabel.setText('invalid username or password')
     
     def changeToSignup(self):
         self.stack.setCurrentWidget(self.signup)
