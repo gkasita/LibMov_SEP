@@ -19,7 +19,7 @@ class HpStack(QMainWindow):
         self.stack = QStackedWidget()
         self.setCentralWidget(self.stack)
 
-        self.hp = HomePageC.HomePageC(user)
+        self.hp = HomePageC.HomePageC()
         self.rv = ReviewC.ReviewC(user)
         self.w = WatchC.WatchC(user)
         self.pf = ProfileC.ProfileC(user)
@@ -57,7 +57,6 @@ class HpStack(QMainWindow):
         print('HpStack load function')
         self.user = u1
 
-        self.hp.load(u1)
         self.rv.load(u1)
         self.w.load(u1)
         self.pf.load(u1)

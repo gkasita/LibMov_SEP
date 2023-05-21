@@ -55,6 +55,7 @@ class MainStack(QMainWindow):
     def changeToLogin_Logout(self):
         self.stackp.w.clear()
         self.stackp.rv.clear()
+        self.stackp.hp.clear()
         self.stack.setCurrentWidget(self.login)
     
     

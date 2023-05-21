@@ -7,7 +7,7 @@ import datetime
 import Image
 
 class User(persistent.Persistent):
-    def __init__(self, username, password):
+    def __init__(self, username, password=None):
         self._username = username
         self._password = password
 

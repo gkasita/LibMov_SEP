@@ -11,6 +11,7 @@ class Connection:
     root = connection.root()
 
     accounts = root.get('accounts')
+
     if accounts is None:
         accounts = {}
 
