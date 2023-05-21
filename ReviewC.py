@@ -19,6 +19,8 @@ class ReviewC(QMainWindow):
 
         self.ui.addButton.clicked.connect(self.addReviewUi)
         self.ui.deleteButton.clicked.connect(self.removeReview)
+        self.ui.editButton.clicked.connect(self.modifyReview)
+        self.ui.saveButton.clicked.connect(self.saveReview)
     
     def load(self, user):
         self.user = user
@@ -60,9 +62,28 @@ class ReviewC(QMainWindow):
             if r.getMovie().getTitle() == title:
                 self.ui.ratingSPB.setValue(r.getStarRating())
                 self.ui.textArea.setPlainText(r.getReviewText())
-
+                return
+            else:
+                self.ui.label_2.setText("No Review of this movie exists")
         
+        return False
+    
+    def saveReview(self):
+        title = self.ui.searchLED.text()
+        tmp = self.user.getReviewList().getList()
 
+        bool = False
+
+        for r in tmp:
+            if r.getMovie().getTitle() == title:
+                bool = True
+            else:
+                self.ui.label_2.setText("No Review of this movie exists")
+        
+        if(bool):    
+            self.removeReview()
+            self.addReviewUi()
+        
     def clear(self):
         self.ui.searchLED.clear()
         self.ui.textArea.clear()

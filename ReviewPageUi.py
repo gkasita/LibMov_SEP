@@ -143,24 +143,42 @@ class Ui_Form(object):
 
         self.horizontalLayout_3.addWidget(self.addButton)
 
-        self.editButton = QPushButton(self.widget)
+        self.deleteButton = QPushButton(self.widget)
+        self.deleteButton.setObjectName(u"deleteButton")
+        self.deleteButton.setMinimumSize(QSize(170, 25))
+        self.deleteButton.setMaximumSize(QSize(150, 25))
+        self.deleteButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
+
+        self.horizontalLayout_3.addWidget(self.deleteButton)
+
+
+        self.verticalLayout_2.addWidget(self.widget)
+
+        self.widget_3 = QWidget(self.frame_2)
+        self.widget_3.setObjectName(u"widget_3")
+        self.widget_3.setMinimumSize(QSize(350, 30))
+        self.widget_3.setMaximumSize(QSize(350, 25))
+        self.horizontalLayout_4 = QHBoxLayout(self.widget_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.editButton = QPushButton(self.widget_3)
         self.editButton.setObjectName(u"editButton")
         self.editButton.setMinimumSize(QSize(170, 25))
         self.editButton.setMaximumSize(QSize(150, 25))
         self.editButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
 
-        self.horizontalLayout_3.addWidget(self.editButton)
+        self.horizontalLayout_4.addWidget(self.editButton)
+
+        self.saveButton = QPushButton(self.widget_3)
+        self.saveButton.setObjectName(u"saveButton")
+        self.saveButton.setMinimumSize(QSize(170, 25))
+        self.saveButton.setMaximumSize(QSize(150, 25))
+        self.saveButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
+
+        self.horizontalLayout_4.addWidget(self.saveButton)
 
 
-        self.verticalLayout_2.addWidget(self.widget)
-
-        self.deleteButton = QPushButton(self.frame_2)
-        self.deleteButton.setObjectName(u"deleteButton")
-        self.deleteButton.setMinimumSize(QSize(0, 25))
-        self.deleteButton.setMaximumSize(QSize(16777215, 25))
-        self.deleteButton.setStyleSheet(u"background-color: rgb(131, 16, 16);")
-
-        self.verticalLayout_2.addWidget(self.deleteButton)
+        self.verticalLayout_2.addWidget(self.widget_3)
 
         self.label_2 = QLabel(self.frame_2)
         self.label_2.setObjectName(u"label_2")
@@ -253,8 +271,9 @@ class Ui_Form(object):
         self.libmovBT.setText(QCoreApplication.translate("Form", u"LibMov", None))
         self.profileBT.setText(QCoreApplication.translate("Form", u"Profile", None))
         self.addButton.setText(QCoreApplication.translate("Form", u"Add", None))
-        self.editButton.setText(QCoreApplication.translate("Form", u"Edit", None))
         self.deleteButton.setText(QCoreApplication.translate("Form", u"Delete", None))
+        self.editButton.setText(QCoreApplication.translate("Form", u"Edit", None))
+        self.saveButton.setText(QCoreApplication.translate("Form", u"Save", None))
         self.label_2.setText("")
         self.label.setText(QCoreApplication.translate("Form", u"Star Rating", None))
         self.pushButton_3.setText(QCoreApplication.translate("Form", u"LibMov", None))
