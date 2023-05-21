@@ -197,15 +197,18 @@ class ReviewList(List, persistent.Persistent):
         tmp = ((self._average_rating * (self._total_movie-1)) + movie.getStarRating())/self._total_movie
         self._average_rating = tmp
     
-    def deleteMovie(self, movie):
+    def deleteMovie(self, title):
         i = 0
         for m in self._list:
-            if movie.getMovie().getTitle() == m.getMovie().getTitle():
+            if m.getMovie().getTitle() == title:
                 del self._list[i]
                 self._total_movie -= 1
-                return
-            
-        return -1
+                print("i:" + str(i))
+                i=i+1
+                return i
+            i = i+1
+        
+        return None
     
     def printDetails(self):
         for l in self._list:

@@ -18,7 +18,7 @@ class ReviewC(QMainWindow):
         self.user = user
 
         self.ui.addButton.clicked.connect(self.addReviewUi)
-        self.ui.deleteButton.clicked.connect(self.clear)
+        self.ui.deleteButton.clicked.connect(self.removeReview)
     
     def load(self, user):
         self.user = user
@@ -34,12 +34,34 @@ class ReviewC(QMainWindow):
                 return True
             else:
                 return False
-        
-    def editReview(self):
-        pass
 
     def removeReview(self):
-        pass
+        title = self.ui.searchLED.text()
+        tmp = self.user.getReviewList()
+
+        i = tmp.deleteMovie(title)
+        if i is not None:
+            item = self.ui.verticalLayout.takeAt(i+1)
+            if item is not None:
+                widget = item.widget()
+                if widget is not None:
+                    self.ui.verticalLayout.removeWidget(widget)
+                    widget.deleteLater()
+        
+        Connection.Connection.saveData()
+
+
+    def modifyReview(self):
+        title = self.ui.searchLED.text()
+
+        tmp = self.user.getReviewList().getList()
+
+        for r in tmp:
+            if r.getMovie().getTitle() == title:
+                self.ui.ratingSPB.setValue(r.getStarRating())
+                self.ui.textArea.setPlainText(r.getReviewText())
+
+        
 
     def clear(self):
         self.ui.searchLED.clear()
