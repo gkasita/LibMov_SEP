@@ -203,6 +203,8 @@ class ReviewList(List, persistent.Persistent):
             if m.getMovie().getTitle() == title:
                 del self._list[i]
                 self._total_movie -= 1
+                tmp = ((self._average_rating) * (self._total_movie)) - m.getStarRating()/self._total_movie
+                self._average_rating = tmp
                 print("i:" + str(i))
                 i=i+1
                 return i
