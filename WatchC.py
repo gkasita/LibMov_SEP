@@ -103,7 +103,28 @@ class WatchC(QMainWindow):
             for s in suggest_tmp:
                 self.ui.textArea.appendPlainText(s)
             return
-     
+        
+        already_added = False
+        
+        if (tmp == "watching"):
+            list = self.user.getWatchingList().getList()
+            for l in list:
+                if l.getTitle() == title:
+                    already_added = True
+        elif (tmp == "will watch"):
+            list = self.user.getWillWatchList().getList()
+            for l in list:
+                if l.getTitle() == title:
+                    already_added = True
+        elif (tmp == "watched"):
+            list = self.user.getWatchedList().getList()
+            for l in list:
+                if l.getTitle() == title:
+                    already_added = True
+        if (already_added):
+            self.ui.textArea.setPlainText("Movie already exist within your list")
+            return
+      
         m1 = Account.Movie(title)
         image = m1.getImagePath()
         print(image)

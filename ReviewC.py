@@ -120,6 +120,7 @@ class ReviewC(QMainWindow):
             self.user.getReviewList().addMovie(r1)
             Connection.Connection.saveData()
 
+        r1 = Account.ReviewMovie(m1, review, rating)
         image = m1.getImagePath()
 
         widget = QWidget(self.ui.scrollAreaWidgetContents)
