@@ -2,7 +2,6 @@ import persistent
 import requests
 from abc import ABC, abstractmethod
 import ZODB, ZODB.FileStorage
-import datetime
 
 import Image
 
@@ -22,6 +21,9 @@ class User(persistent.Persistent):
     def getPassword(self):
         return self._password
     
+    def setPassword(self, password):
+        self._password = password
+
     def setUsername(self, username, password):
         if (password == self._password):
             self._username = username
@@ -216,20 +218,7 @@ class ReviewList(List, persistent.Persistent):
         for l in self._list:
             l.printDetails()
 
-class ReviewMain(ReviewMovie, persistent.Persistent):
-    def __init__(self, movie, review_text, star_rating, user):
-        super().__init__(movie, review_text, star_rating)
-        self._user = user
-        self._date_time = datetime.datetime.now()
-    
-    def getUser(self):
-        return self._user
-    
-    def getDateTime(self):
-        return self._date_time
-    
-    def printDetails(self):
-        print("Posted by: " + self._user.getUsername() + ", on " + str(self._date_time))
+
 
 
 
