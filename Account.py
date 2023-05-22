@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 import ZODB, ZODB.FileStorage
 
 import Image
+import datetime
 
 class User(persistent.Persistent):
     def __init__(self, username, password=None):
@@ -114,6 +115,8 @@ class ReviewMovie(persistent.Persistent):
         self._movie = movie
         self._review_text = review_text
         self._star_rating = star_rating
+
+        self._date_time = datetime.datetime.now()
     
     def getMovie(self):
         return self._movie
@@ -124,11 +127,16 @@ class ReviewMovie(persistent.Persistent):
     def getStarRating(self):
         return self._star_rating
     
+    def getDateTime(self):
+        return self._date_time
+    
     def modifyReviewText(self, review_text):
         self._review_text = review_text
+        self._date_time = datetime.datetime.now()
 
     def modifyStarRating(self, star_rating):
         self._star_rating = star_rating
+        self._date_time = datetime.datetime.now()
     
     def printDetails(self):
         self._movie.printDetails()

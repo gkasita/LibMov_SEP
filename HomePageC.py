@@ -73,7 +73,7 @@ class HomePageC(QMainWindow):
             movieLB = QLabel(widget)
             movieLB.setObjectName(u"movieLB")
             movieLB.setGeometry(QRect(160, 50, 181, 111))
-            movieLB.setText("Movie ID: " + str(r.getMovie().getMovieId()) + "\n" + "Genre: " + str(r.getMovie().getGenre()) + "\n" + "Released Year: " + str(r.getMovie().getReleasedYear()))
+            movieLB.setText("Movie ID: " + str(r.getMovie().getMovieId()) + "\n" + "Genre: " + str(r.getMovie().getGenre()) + "\n" + "Released Year: " + str(r.getMovie().getReleasedYear())+ "\n" + "Posted on: " + str(r.getDateTime()))
 
             starratingLED = QLineEdit(widget)
             starratingLED.setObjectName(u"starratingLED")

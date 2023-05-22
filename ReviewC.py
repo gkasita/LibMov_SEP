@@ -152,7 +152,7 @@ class ReviewC(QMainWindow):
         movieLB = QLabel(widget)
         movieLB.setObjectName(u"movieLB")
         movieLB.setGeometry(QRect(160, 50, 181, 111))
-        movieLB.setText("Movie ID: " + str(m1.getMovieId()) + "\n" + "Genre: " + str(m1.getGenre()) + "\n" + "Released Year: " + str(m1.getReleasedYear()))
+        movieLB.setText("Movie ID: " + str(m1.getMovieId()) + "\n" + "Genre: " + str(m1.getGenre()) + "\n" + "Released Year: " + str(m1.getReleasedYear()) + "\n" + "Posted on: " + str(r1.getDateTime()))
 
         starratingLED = QLineEdit(widget)
         starratingLED.setObjectName(u"starratingLED")
