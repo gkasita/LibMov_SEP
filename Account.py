@@ -188,7 +188,6 @@ class MovieList(List, persistent.Persistent):
 class ReviewList(List, persistent.Persistent):
     def __init__(self):
         self._list = persistent.list.PersistentList()
-        self._average_rating = 0
         self._total_movie = 0
         
     def getList(self):
@@ -203,9 +202,6 @@ class ReviewList(List, persistent.Persistent):
     def addMovie(self, movie):
         self._list.append(movie)
         self._total_movie += 1
-        
-        tmp = ((self._average_rating * (self._total_movie-1)) + movie.getStarRating())/self._total_movie
-        self._average_rating = tmp
     
     def deleteMovie(self, title):
         i = 0
@@ -213,8 +209,6 @@ class ReviewList(List, persistent.Persistent):
             if m.getMovie().getTitle() == title:
                 del self._list[i]
                 self._total_movie -= 1
-                tmp = ((self._average_rating) * (self._total_movie)) - m.getStarRating()/self._total_movie
-                self._average_rating = tmp
                 print("i:" + str(i))
                 i=i+1
                 return i
