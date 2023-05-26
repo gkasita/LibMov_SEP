@@ -38,6 +38,7 @@ class ReviewC(QMainWindow):
                 return False
 
     def removeReview(self):
+        self.ui.label_2.setText(" ")
         title = self.ui.searchLED.text()
         tmp = self.user.getReviewList()
 
@@ -69,6 +70,7 @@ class ReviewC(QMainWindow):
         return False
     
     def saveReview(self):
+        self.ui.label_2.setText(" ")
         title = self.ui.searchLED.text()
         tmp = self.user.getReviewList().getList()
 
@@ -87,6 +89,7 @@ class ReviewC(QMainWindow):
     def clear(self):
         self.ui.searchLED.clear()
         self.ui.textArea.clear()
+        self.ui.label_2.setText(" ")
 
         while self.ui.verticalLayout.count()-2:
             item = self.ui.verticalLayout.takeAt(2)
@@ -97,6 +100,7 @@ class ReviewC(QMainWindow):
                     widget.deleteLater()
     
     def addReviewUi(self):
+        self.ui.label_2.setText(" ")
         title = self.ui.searchLED.text()
         rating = self.ui.ratingSPB.value()
         review = self.ui.textArea.toPlainText()
