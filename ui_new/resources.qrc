@@ -1,0 +1,54 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>Icons/search-2-line.png</file>
+    <file>Icons/search-line.png</file>
+    <file>Icons/arrow-down-s-line.png</file>
+    <file>Icons/arrow-left-s-line.png</file>
+    <file>Icons/arrow-right-s-line.png</file>
+    <file>Icons/arrow-up-s-line.png</file>
+    <file>Icons/bookmark-line.png</file>
+    <file>Icons/computer-fill.png</file>
+    <file>Icons/computer-line.png</file>
+    <file>Icons/dashboard-line.png</file>
+    <file>Icons/edit-2-line.png</file>
+    <file>Icons/edit-box-line.png</file>
+    <file>Icons/edit-line.png</file>
+    <file>Icons/eject-line.png</file>
+    <file>Icons/expand-left-right-line.png</file>
+    <file>Icons/expand-up-down-line.png</file>
+    <file>Icons/home-2-line.png</file>
+    <file>Icons/home-heart-line.png</file>
+    <file>Icons/inbox-2-line.png</file>
+    <file>Icons/inbox-archive-line.png</file>
+    <file>Icons/LIBMOV (H).png</file>
+    <file>Icons/LIBMOV (H2).png</file>
+    <file>Icons/login-box-line.png</file>
+    <file>Icons/logout-box-line.png</file>
+    <file>Icons/macbook-fill.png</file>
+    <file>Icons/macbook-line.png</file>
+    <file>Icons/mac-fill.png</file>
+    <file>Icons/mac-line.png</file>
+    <file>Icons/menu-line.png</file>
+    <file>Icons/pause-line.png</file>
+    <file>Icons/play-line.png</file>
+    <file>Icons/profile-line.png</file>
+    <file>Icons/quill-pen-line.png</file>
+    <file>Icons/repeat-line.png</file>
+    <file>Icons/rewind-line.png</file>
+    <file>Icons/save-3-line.png</file>
+    <file>Icons/settings-3-line.png</file>
+    <file>Icons/skip-back-line.png</file>
+    <file>Icons/skip-down-line.png</file>
+    <file>Icons/skip-forward-line.png</file>
+    <file>Icons/skip-left-line.png</file>
+    <file>Icons/skip-right-line.png</file>
+    <file>Icons/skip-up-line.png</file>
+    <file>Icons/speed-line.png</file>
+    <file>Icons/stop-line.png</file>
+    <file>Icons/tv-2-fill.png</file>
+    <file>Icons/tv-2-line.png</file>
+    <file>Icons/tv-fill.png</file>
+    <file>Icons/tv-line.png</file>
+    <file>Icons/LIBMOV.png</file>
+  </qresource>
+</RCC>
