@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'ProfilePageUi.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.4.2
+## Created by: Qt User Interface Compiler version 6.5.0
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -25,6 +25,7 @@ class Ui_Form(object):
         Form.resize(950, 650)
         Form.setMinimumSize(QSize(950, 650))
         Form.setMaximumSize(QSize(950, 650))
+        Form.setSizeIncrement(QSize(300, 200))
         Form.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.menu = QFrame(Form)
         self.menu.setObjectName(u"menu")
@@ -79,7 +80,19 @@ class Ui_Form(object):
         self.profileBT.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label = QLabel(Form)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(380, 130, 58, 16))
+        self.label.setGeometry(QRect(500, 200, 200, 50))
+        self.button = QPushButton(Form)
+        self.button.setObjectName(u"button")
+        self.button.setGeometry(QRect(490, 260, 101, 24))
+        self.label_2 = QLabel(Form)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setGeometry(QRect(250, 330, 49, 16))
+        self.label_3 = QLabel(Form)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setGeometry(QRect(520, 330, 49, 16))
+        self.label_4 = QLabel(Form)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setGeometry(QRect(780, 330, 61, 16))
 
         self.retranslateUi(Form)
 
@@ -94,5 +107,9 @@ class Ui_Form(object):
         self.libmovBT.setText(QCoreApplication.translate("Form", u"LibMov", None))
         self.profileBT.setText(QCoreApplication.translate("Form", u"Profile", None))
         self.label.setText(QCoreApplication.translate("Form", u"Profile", None))
+        self.button.setText(QCoreApplication.translate("Form", u"Chang Password", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"Watched", None))
+        self.label_3.setText(QCoreApplication.translate("Form", u"Watching", None))
+        self.label_4.setText(QCoreApplication.translate("Form", u"Will Watch", None))
     # retranslateUi
 
