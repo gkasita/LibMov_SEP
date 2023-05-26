@@ -264,7 +264,7 @@ color: rgb(131, 16, 16);</string>
     <string>Chang Password</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -277,7 +277,7 @@ color: rgb(131, 16, 16);</string>
     <string>Watched</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
      <x>520</x>
@@ -290,7 +290,7 @@ color: rgb(131, 16, 16);</string>
     <string>Watching</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
      <x>780</x>
@@ -301,6 +301,45 @@ color: rgb(131, 16, 16);</string>
    </property>
    <property name="text">
     <string>Will Watch</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>370</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>370</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>780</x>
+     <y>370</y>
+     <width>49</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>
