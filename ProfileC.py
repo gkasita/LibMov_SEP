@@ -21,6 +21,12 @@ class ProfileC(QMainWindow):
         self.ui.label.setText(f"Welcome, {self.user.getUsername()}!")
         self.ui.label.setGeometry(QRect(500,200, 200, 100))
 
+        self.ui.label_2.setText(f"{self.user.getWatchedList().getTotalMovie()}")
+        self.ui.label_3.setText(f"{self.user.getWatchedList().getTotalMovie()}")
+        self.ui.label_4.setText(f"{self.user.getWatchedList().getTotalMovie()}")
+
+
+
     def updatePassword(self):
         reply = QMessageBox.question(
             self, "Confirmation", "Are you sure you want to change your password?", 
