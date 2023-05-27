@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>Icons/play-line_big.png</file>
+    <file>Icons/skip-back-line_big.png</file>
+    <file>Icons/skip-forward-line_big.png</file>
+    <file>Icons/add-circle-line.png</file>
+    <file>Icons/close-circle-line.png</file>
+    <file>Icons/delete-bin-line.png</file>
     <file>Icons/user-search-line (1).png</file>
     <file>Icons/map-pin-user-line.png</file>
     <file>Icons/user-line.png</file>
