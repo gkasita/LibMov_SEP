@@ -60,8 +60,7 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(187, 0, 41)
-</string>
+    <string notr="true">background-color: rgb(0, 9, 44);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -123,7 +122,7 @@ color: rgb(131, 16, 16);</string>
      <rect>
       <x>0</x>
       <y>100</y>
-      <width>102</width>
+      <width>107</width>
       <height>551</height>
      </rect>
     </property>
@@ -131,8 +130,11 @@ color: rgb(131, 16, 16);</string>
      <property name="spacing">
       <number>10</number>
      </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
      <property name="bottomMargin">
-      <number>5</number>
+      <number>0</number>
      </property>
      <item>
       <widget class="QPushButton" name="profileBT">
@@ -258,11 +260,13 @@ color: rgb(131, 16, 16);</string>
         <font>
          <family>Verdana</family>
          <pointsize>15</pointsize>
-         <bold>true</bold>
+         <bold>false</bold>
         </font>
        </property>
        <property name="styleSheet">
-        <string notr="true"/>
+        <string notr="true">background-color: rgb(243, 240, 209);
+border-radius: 25px;
+border-color: rgb(0, 9, 44);</string>
        </property>
        <property name="text">
         <string/>
@@ -278,7 +282,7 @@ color: rgb(131, 16, 16);</string>
         </size>
        </property>
        <property name="flat">
-        <bool>true</bool>
+        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -432,7 +436,7 @@ color: rgb(131, 16, 16);</string>
        <property name="font">
         <font>
          <family>Century Schoolbook</family>
-         <pointsize>25</pointsize>
+         <pointsize>45</pointsize>
         </font>
        </property>
        <property name="text">
