@@ -255,11 +255,20 @@ padding-bottom: 8px;</string>
      </item>
      <item>
       <widget class="QLabel" name="errorLabel">
+       <property name="font">
+        <font>
+         <family>Century Schoolbook</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(229, 9, 20);</string>
        </property>
        <property name="text">
         <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
