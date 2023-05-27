@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>Icons/user-search-line (1).png</file>
+    <file>Icons/map-pin-user-line.png</file>
+    <file>Icons/user-line.png</file>
+    <file>Icons/user-search-line.png</file>
     <file>Icons/search-2-line.png</file>
     <file>Icons/search-line.png</file>
     <file>Icons/arrow-down-s-line.png</file>
