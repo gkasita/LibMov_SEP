@@ -22,8 +22,8 @@ class ProfileC(QMainWindow):
         self.ui.label.setGeometry(QRect(500,200, 200, 100))
 
         self.ui.label_2.setText(f"{self.user.getWatchedList().getTotalMovie()}")
-        self.ui.label_3.setText(f"{self.user.getWatchedList().getTotalMovie()}")
-        self.ui.label_4.setText(f"{self.user.getWatchedList().getTotalMovie()}")
+        self.ui.label_3.setText(f"{self.user.getWatchingList().getTotalMovie()}")
+        self.ui.label_4.setText(f"{self.user.getWillWatchList().getTotalMovie()}")
 
 
 
