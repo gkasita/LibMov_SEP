@@ -30,7 +30,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>650</width>
+     <width>951</width>
      <height>650</height>
     </rect>
    </property>
@@ -40,7 +40,7 @@
    <widget class="QLabel" name="titleLB_2">
     <property name="geometry">
      <rect>
-      <x>125</x>
+      <x>275</x>
       <y>-10</y>
       <width>400</width>
       <height>400</height>
@@ -87,8 +87,8 @@
    <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>530</y>
+      <x>390</x>
+      <y>520</y>
       <width>162</width>
       <height>73</height>
      </rect>
@@ -132,7 +132,7 @@ border-radius: 15px;</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="noAccButton">
+      <widget class="QPushButton" name="signupButton">
        <property name="minimumSize">
         <size>
          <width>75</width>
@@ -166,8 +166,8 @@ border-radius: 15px;</string>
    <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>400</y>
+      <x>320</x>
+      <y>390</y>
       <width>304</width>
       <height>118</height>
      </rect>
@@ -269,133 +269,6 @@ padding-bottom: 8px;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QWidget" name="widget_2" native="true">
-   <property name="geometry">
-    <rect>
-     <x>650</x>
-     <y>0</y>
-     <width>300</width>
-     <height>650</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(0, 9, 44);
-</string>
-   </property>
-   <widget class="QWidget" name="layoutWidget_3">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>140</y>
-      <width>302</width>
-      <height>353</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_5">
-     <property name="spacing">
-      <number>50</number>
-     </property>
-     <item>
-      <layout class="QVBoxLayout" name="verticalLayout_4">
-       <property name="spacing">
-        <number>20</number>
-       </property>
-       <property name="leftMargin">
-        <number>2</number>
-       </property>
-       <property name="rightMargin">
-        <number>2</number>
-       </property>
-       <item>
-        <widget class="QLabel" name="titleLB">
-         <property name="font">
-          <font>
-           <family>Century Schoolbook</family>
-           <pointsize>38</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(243, 240, 209);</string>
-         </property>
-         <property name="text">
-          <string>New Here?</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="textLB">
-         <property name="font">
-          <font>
-           <family>Century Schoolbook</family>
-           <kerning>true</kerning>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(243, 240, 209);</string>
-         </property>
-         <property name="lineWidth">
-          <number>1</number>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#f3f0d1;&quot;&gt;Sign Up to discover Movie Journaling &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#f3f0d1;&quot;&gt;with&lt;/span&gt;&lt;span style=&quot; font-size:14pt; color:#f3f0d1;&quot;&gt; LibMov&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#f3f0d1;&quot;&gt;, &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#f3f0d1;&quot;&gt;your very own digital &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#f3f0d1;&quot;&gt;movie journaling library.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-         <property name="textFormat">
-          <enum>Qt::RichText</enum>
-         </property>
-         <property name="scaledContents">
-          <bool>false</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="wordWrap">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QPushButton" name="signupButton">
-       <property name="minimumSize">
-        <size>
-         <width>160</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <family>Century Schoolbook</family>
-         <pointsize>18</pointsize>
-         <bold>true</bold>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(162, 14, 14);
-color: rgb(243, 240, 209);
-border-radius: 15px;</string>
-       </property>
-       <property name="text">
-        <string>SIGN UP</string>
-       </property>
-       <property name="checkable">
-        <bool>true</bool>
-       </property>
-       <property name="autoExclusive">
-        <bool>true</bool>
-       </property>
-       <property name="flat">
-        <bool>false</bool>
        </property>
       </widget>
      </item>
