@@ -165,7 +165,7 @@ class WatchC(QMainWindow):
         type = self.whichType()
 
         if(type == False):
-            self.ui.textArea.SetPlainText("No movie")
+            self.ui.textArea.setPlainText("No movie")
             print("type false")
         elif type == "watched":
             print("watched")
