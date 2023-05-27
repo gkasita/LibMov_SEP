@@ -1,6 +1,9 @@
 <RCC>
   <qresource prefix="Icons">
     <file>Icons/play-line_big.png</file>
+    <file>Icons/Watched.png</file>
+    <file>Icons/Watching.png</file>
+    <file>Icons/Will Watch.png</file>
     <file>Icons/skip-back-line_big.png</file>
     <file>Icons/skip-forward-line_big.png</file>
     <file>Icons/add-circle-line.png</file>

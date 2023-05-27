@@ -63,7 +63,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>831</width>
+      <width>900</width>
       <height>1300</height>
      </rect>
     </property>
@@ -80,6 +80,21 @@
      </size>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QFrame" name="frame">
        <property name="minimumSize">
@@ -100,7 +115,7 @@
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout" stretch="0">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -129,7 +144,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>809</width>
+             <width>896</width>
              <height>116</height>
             </rect>
            </property>
@@ -141,13 +156,13 @@
              <number>0</number>
             </property>
             <property name="topMargin">
-             <number>0</number>
+             <number>2</number>
             </property>
             <property name="rightMargin">
              <number>0</number>
             </property>
             <property name="bottomMargin">
-             <number>0</number>
+             <number>2</number>
             </property>
             <item>
              <widget class="QFrame" name="frame_2">
@@ -372,20 +387,35 @@ color: rgb(0, 9, 44);</string>
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>50</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>50</height>
+         <height>100</height>
         </size>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
        <property name="text">
-        <string>Watched</string>
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/Icons/Icons/Watched.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -414,11 +444,26 @@ color: rgb(0, 9, 44);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>811</width>
+          <width>898</width>
           <height>198</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QPushButton" name="pushButton">
            <property name="minimumSize">
@@ -464,20 +509,35 @@ color: rgb(255, 255, 255);</string>
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>50</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>50</height>
+         <height>100</height>
         </size>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
        <property name="text">
-        <string>Watching</string>
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/Icons/Icons/Watching.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
        </property>
       </widget>
      </item>
@@ -506,11 +566,26 @@ color: rgb(255, 255, 255);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>811</width>
+          <width>898</width>
           <height>198</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QPushButton" name="pushButton_2">
            <property name="minimumSize">
@@ -559,20 +634,35 @@ color: rgb(255, 255, 255);</string>
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>50</height>
+         <height>100</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>50</height>
+         <height>100</height>
         </size>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
        <property name="text">
-        <string>Will Watch</string>
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="resources.qrc">:/Icons/Icons/Will Watch.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </item>
@@ -601,11 +691,26 @@ color: rgb(255, 255, 255);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>811</width>
+          <width>898</width>
           <height>198</height>
          </rect>
         </property>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="spacing">
+          <number>5</number>
+         </property>
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
          <item>
           <widget class="QPushButton" name="pushButton_3">
            <property name="minimumSize">
@@ -648,6 +753,18 @@ color: rgb(255, 255, 255);</string>
      </item>
      <item>
       <widget class="QLabel" name="label_5">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>100</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>150</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
@@ -681,7 +798,7 @@ color: rgb(255, 255, 255);</string>
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>811</width>
+          <width>898</width>
           <height>198</height>
          </rect>
         </property>
@@ -780,7 +897,7 @@ color: rgb(131, 16, 16);</string>
      <rect>
       <x>0</x>
       <y>100</y>
-      <width>107</width>
+      <width>102</width>
       <height>551</height>
      </rect>
     </property>
