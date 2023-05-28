@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="Icons">
+    <file>Icons/user-star-line.png</file>
+    <file>Icons/Profile Title Card.png</file>
     <file>Icons/Review-Journal.png</file>
     <file>Icons/play-line_big.png</file>
     <file>Icons/star-line.png</file>
