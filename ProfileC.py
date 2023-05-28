@@ -19,7 +19,6 @@ class ProfileC(QMainWindow):
     def load(self, user):
         self.user = user
         self.ui.label.setText(f"Welcome, {self.user.getUsername()}!")
-        self.ui.label.setGeometry(QRect(500,200, 200, 100))
 
         self.ui.label_2.setText(f"{self.user.getWatchedList().getTotalMovie()}")
         self.ui.label_3.setText(f"{self.user.getWatchingList().getTotalMovie()}")
