@@ -54,14 +54,14 @@ class Ui_Form(object):
         self.scrollArea_7.setMaximumSize(QSize(850, 150))
         self.scrollArea_7.setStyleSheet(u"background-color: rgb(0, 9, 44);")
         self.scrollArea_7.setWidgetResizable(True)
-        self.scrollAreaWidgetContents_8 = QWidget()
-        self.scrollAreaWidgetContents_8.setObjectName(u"scrollAreaWidgetContents_8")
-        self.scrollAreaWidgetContents_8.setGeometry(QRect(0, 0, 848, 148))
-        self.horizontalLayout_4 = QHBoxLayout(self.scrollAreaWidgetContents_8)
+        self.scrollAreaWidgetContents_7 = QWidget()
+        self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 848, 148))
+        self.horizontalLayout_4 = QHBoxLayout(self.scrollAreaWidgetContents_7)
         self.horizontalLayout_4.setSpacing(5)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(5, 0, 5, 0)
-        self.frame_2 = QFrame(self.scrollAreaWidgetContents_8)
+        self.frame_2 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setMinimumSize(QSize(300, 140))
         self.frame_2.setFrameShape(QFrame.StyledPanel)
@@ -181,7 +181,7 @@ class Ui_Form(object):
 
         self.horizontalLayout_4.addWidget(self.frame_2)
 
-        self.frame_3 = QFrame(self.scrollAreaWidgetContents_8)
+        self.frame_3 = QFrame(self.scrollAreaWidgetContents_7)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMinimumSize(QSize(100, 140))
         self.frame_3.setMaximumSize(QSize(16777215, 140))
@@ -220,7 +220,7 @@ class Ui_Form(object):
 
         self.horizontalLayout_4.addWidget(self.frame_3)
 
-        self.textArea = QPlainTextEdit(self.scrollAreaWidgetContents_8)
+        self.textArea = QPlainTextEdit(self.scrollAreaWidgetContents_7)
         self.textArea.setObjectName(u"textArea")
         self.textArea.setMinimumSize(QSize(0, 140))
         self.textArea.setMaximumSize(QSize(16777215, 140))
@@ -232,7 +232,7 @@ class Ui_Form(object):
 
         self.horizontalLayout_4.addWidget(self.textArea)
 
-        self.scrollArea_7.setWidget(self.scrollAreaWidgetContents_8)
+        self.scrollArea_7.setWidget(self.scrollAreaWidgetContents_7)
 
         self.verticalLayout.addWidget(self.scrollArea_7)
 
@@ -352,15 +352,8 @@ class Ui_Form(object):
 
         self.verticalLayout_4.addWidget(self.logoutBT)
 
-        self.layoutWidget1.raise_()
+        self.layoutWidget.raise_()
         self.libmovBT.raise_()
-        self.layoutWidget1 = QWidget(Form)
-        self.layoutWidget1.setObjectName(u"layoutWidget1")
-        self.layoutWidget1.setGeometry(QRect(0, 0, 2, 2))
-        self.verticalLayout_5 = QVBoxLayout(self.layoutWidget1)
-        self.verticalLayout_5.setSpacing(5)
-        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
 
         self.retranslateUi(Form)
 

@@ -106,7 +106,7 @@
        <property name="widgetResizable">
         <bool>true</bool>
        </property>
-       <widget class="QWidget" name="scrollAreaWidgetContents_8">
+       <widget class="QWidget" name="scrollAreaWidgetContents_7">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -869,21 +869,6 @@ border-color: rgb(0, 9, 44);</string>
    </widget>
    <zorder>layoutWidget</zorder>
    <zorder>libmovBT</zorder>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>2</width>
-     <height>2</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_5">
-    <property name="spacing">
-     <number>5</number>
-    </property>
-   </layout>
   </widget>
  </widget>
  <resources>
