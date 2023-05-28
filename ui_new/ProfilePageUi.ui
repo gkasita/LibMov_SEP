@@ -347,12 +347,15 @@ border-color: rgb(0, 9, 44);</string>
    <property name="geometry">
     <rect>
      <x>100</x>
-     <y>80</y>
-     <width>432</width>
-     <height>242</height>
+     <y>150</y>
+     <width>492</width>
+     <height>77</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
     <item>
      <widget class="QLabel" name="label_9">
       <property name="maximumSize">
@@ -374,9 +377,15 @@ border-color: rgb(0, 9, 44);</string>
     </item>
     <item>
      <widget class="QLabel" name="label">
+      <property name="minimumSize">
+       <size>
+        <width>400</width>
+        <height>0</height>
+       </size>
+      </property>
       <property name="maximumSize">
        <size>
-        <width>250</width>
+        <width>400</width>
         <height>75</height>
        </size>
       </property>
@@ -387,7 +396,7 @@ border-color: rgb(0, 9, 44);</string>
        </font>
       </property>
       <property name="text">
-       <string>User Profile</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -396,141 +405,172 @@ border-color: rgb(0, 9, 44);</string>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>100</x>
      <y>340</y>
-     <width>531</width>
-     <height>78</height>
+     <width>841</width>
+     <height>128</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <property name="spacing">
-     <number>75</number>
-    </property>
-    <property name="leftMargin">
-     <number>50</number>
-    </property>
-    <property name="rightMargin">
-     <number>50</number>
-    </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
       <property name="spacing">
-       <number>25</number>
+       <number>30</number>
       </property>
       <item>
-       <widget class="QLabel" name="label_5">
-        <property name="font">
-         <font>
-          <family>Century Schoolbook</family>
-          <pointsize>15</pointsize>
-         </font>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>25</number>
         </property>
-        <property name="text">
-         <string>Watched</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <family>Century Schoolbook</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Watched</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Century Schoolbook</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <family>Century Schoolbook</family>
-          <pointsize>15</pointsize>
-         </font>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>25</number>
         </property>
-        <property name="text">
-         <string/>
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>Century Schoolbook</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Watching</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>Century Schoolbook</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <property name="spacing">
+         <number>25</number>
         </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="font">
+           <font>
+            <family>Century Schoolbook</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Will Watch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <family>Century Schoolbook</family>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="spacing">
-       <number>25</number>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
       </property>
-      <item>
-       <widget class="QLabel" name="label_6">
-        <property name="font">
-         <font>
-          <family>Century Schoolbook</family>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Watching</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_3">
-        <property name="font">
-         <font>
-          <family>Century Schoolbook</family>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
-      <property name="spacing">
-       <number>25</number>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
       </property>
-      <item>
-       <widget class="QLabel" name="label_7">
-        <property name="font">
-         <font>
-          <family>Century Schoolbook</family>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Will Watch</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="font">
-         <font>
-          <family>Century Schoolbook</family>
-          <pointsize>15</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     </spacer>
     </item>
    </layout>
   </widget>
+  <zorder>button</zorder>
+  <zorder>menu</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
+  <zorder>label_8</zorder>
+  <zorder>horizontalSpacer</zorder>
+  <zorder>horizontalSpacer_2</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>

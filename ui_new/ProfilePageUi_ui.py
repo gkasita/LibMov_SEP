@@ -142,8 +142,9 @@ class Ui_Form(object):
         self.label_8.setAlignment(Qt.AlignCenter)
         self.widget = QWidget(Form)
         self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(100, 80, 432, 242))
+        self.widget.setGeometry(QRect(100, 150, 492, 77))
         self.horizontalLayout = QHBoxLayout(self.widget)
+        self.horizontalLayout.setSpacing(15)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.label_9 = QLabel(self.widget)
@@ -156,7 +157,8 @@ class Ui_Form(object):
 
         self.label = QLabel(self.widget)
         self.label.setObjectName(u"label")
-        self.label.setMaximumSize(QSize(250, 75))
+        self.label.setMinimumSize(QSize(400, 0))
+        self.label.setMaximumSize(QSize(400, 75))
         font5 = QFont()
         font5.setFamilies([u"Century Schoolbook"])
         font5.setPointSize(25)
@@ -166,11 +168,17 @@ class Ui_Form(object):
 
         self.widget1 = QWidget(Form)
         self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(270, 340, 531, 78))
-        self.horizontalLayout_2 = QHBoxLayout(self.widget1)
-        self.horizontalLayout_2.setSpacing(75)
+        self.widget1.setGeometry(QRect(100, 340, 841, 128))
+        self.horizontalLayout_3 = QHBoxLayout(self.widget1)
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer)
+
+        self.horizontalLayout_2 = QHBoxLayout()
+        self.horizontalLayout_2.setSpacing(30)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.horizontalLayout_2.setContentsMargins(50, 0, 50, 0)
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setSpacing(25)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -178,7 +186,7 @@ class Ui_Form(object):
         self.label_5.setObjectName(u"label_5")
         font6 = QFont()
         font6.setFamilies([u"Century Schoolbook"])
-        font6.setPointSize(15)
+        font6.setPointSize(30)
         self.label_5.setFont(font6)
         self.label_5.setAlignment(Qt.AlignCenter)
 
@@ -235,6 +243,18 @@ class Ui_Form(object):
         self.horizontalLayout_2.addLayout(self.verticalLayout_3)
 
 
+        self.horizontalLayout_3.addLayout(self.horizontalLayout_2)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout_3.addItem(self.horizontalSpacer_2)
+
+        self.button.raise_()
+        self.menu.raise_()
+        self.layoutWidget.raise_()
+        self.layoutWidget.raise_()
+        self.label_8.raise_()
+
         self.retranslateUi(Form)
 
         QMetaObject.connectSlotsByName(Form)
@@ -250,7 +270,7 @@ class Ui_Form(object):
         self.logoutBT.setText("")
         self.label_8.setText("")
         self.label_9.setText("")
-        self.label.setText(QCoreApplication.translate("Form", u"User Profile", None))
+        self.label.setText("")
         self.label_5.setText(QCoreApplication.translate("Form", u"Watched", None))
         self.label_2.setText("")
         self.label_6.setText(QCoreApplication.translate("Form", u"Watching", None))
