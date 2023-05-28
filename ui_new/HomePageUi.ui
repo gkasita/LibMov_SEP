@@ -272,7 +272,7 @@ border-color: rgb(0, 9, 44);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resources.qrc">
+        <iconset>
          <normaloff>:/Icons/Icons/logout-box-line.png</normaloff>:/Icons/Icons/logout-box-line.png</iconset>
        </property>
        <property name="iconSize">
@@ -398,7 +398,7 @@ border-color: rgb(0, 9, 44);</string>
         <string/>
        </property>
        <property name="icon">
-        <iconset resource="resources.qrc">
+        <iconset>
          <normaloff>:/Icons/Icons/search-2-line.png</normaloff>:/Icons/Icons/search-2-line.png</iconset>
        </property>
        <property name="iconSize">
@@ -459,7 +459,7 @@ border-color: rgb(0, 9, 44);</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap resource="resources.qrc">:/Icons/Icons/user-search-line (1).png</pixmap>
+        <pixmap>:/Icons/Icons/user-search-line (1).png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -490,19 +490,22 @@ border-color: rgb(0, 9, 44);</string>
       <widget class="QWidget" name="scrollAreaWidgetContents">
        <property name="geometry">
         <rect>
-         <x>-19</x>
+         <x>0</x>
          <y>0</y>
-         <width>850</width>
-         <height>400</height>
+         <width>868</width>
+         <height>381</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
-         <width>850</width>
-         <height>400</height>
+         <width>0</width>
+         <height>0</height>
         </size>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="spacing">
+         <number>10</number>
+        </property>
         <item>
          <widget class="QWidget" name="widget_4" native="true">
           <property name="minimumSize">
@@ -528,6 +531,12 @@ border-color: rgb(0, 9, 44);</string>
              <width>300</width>
              <height>300</height>
             </rect>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>300</width>
+             <height>300</height>
+            </size>
            </property>
            <property name="styleSheet">
             <string notr="true">color: rgb(255, 255, 255);</string>
