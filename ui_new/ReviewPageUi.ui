@@ -489,7 +489,7 @@ border-color: rgb(0, 9, 44);</string>
          <number>0</number>
         </property>
         <item>
-         <widget class="QLineEdit" name="searchLED_2">
+         <widget class="QLineEdit" name="searchLED">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -517,7 +517,7 @@ border-color: rgb(0, 9, 44);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="label_4">
+         <widget class="QLabel" name="label_2">
           <property name="text">
            <string/>
           </property>
@@ -554,7 +554,7 @@ border-color: rgb(0, 9, 44);</string>
              <number>5</number>
             </property>
             <item>
-             <widget class="QPushButton" name="addButton_2">
+             <widget class="QPushButton" name="addButton">
               <property name="minimumSize">
                <size>
                 <width>170</width>
@@ -593,7 +593,7 @@ color: rgb(0, 9, 44);</string>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="deleteButton_2">
+             <widget class="QPushButton" name="deleteButton">
               <property name="minimumSize">
                <size>
                 <width>170</width>
@@ -660,7 +660,7 @@ color: rgb(0, 9, 44);</string>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
-             <widget class="QPushButton" name="editButton_2">
+             <widget class="QPushButton" name="editButton">
               <property name="minimumSize">
                <size>
                 <width>170</width>
@@ -699,7 +699,7 @@ color: rgb(0, 9, 44);</string>
              </widget>
             </item>
             <item>
-             <widget class="QPushButton" name="saveButton_2">
+             <widget class="QPushButton" name="saveButton">
               <property name="minimumSize">
                <size>
                 <width>170</width>
@@ -824,7 +824,7 @@ color: rgb(0, 9, 44);</string>
          </widget>
         </item>
         <item>
-         <widget class="QSpinBox" name="ratingSPB_2">
+         <widget class="QSpinBox" name="ratingSPB">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -849,7 +849,7 @@ color: rgb(0, 9, 44);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPlainTextEdit" name="textArea_2">
+      <widget class="QPlainTextEdit" name="textArea">
        <property name="minimumSize">
         <size>
          <width>0</width>
@@ -876,7 +876,7 @@ color: rgb(0, 9, 44);</string>
     </layout>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
